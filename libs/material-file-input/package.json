@@ -1,0 +1,11 @@
+{
+  "name": "material-file-input",
+  "version": "14.0.0-beta.0",
+  "dependencies": {},
+  "peerDependencies": {
+    "@angular/cdk": "^14.0.0",
+    "@angular/common": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/material": "^14.0.0"
+  }
+}
