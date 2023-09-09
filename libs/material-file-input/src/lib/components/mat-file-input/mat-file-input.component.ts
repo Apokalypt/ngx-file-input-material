@@ -12,7 +12,7 @@ import { FileInputMixinBase } from "../../models/file-input-base-component.model
   selector: 'ngx-mat-file-input',
   styleUrls: ['./mat-file-input.component.css'],
   template: `
-    <input #input type="file" [attr.multiple]="multiple ? '' : null" [attr.accept]="accept">
+    <input #input type="file" [multiple]="multiple ? '' : null" [accept]="accept">
     <span class="filename" [title]="fileNames">{{ fileNames }}</span>
   `,
   providers: [{ provide: MatFormFieldControl, useExisting: MatFileInputComponent }]
@@ -71,7 +71,7 @@ export class MatFileInputComponent extends FileInputMixinBase implements MatForm
 
   @Input() autofilled = false;
 
-  @Input() valuePlaceholder?: string;
+  @Input() valuePlaceholder = '';
   @Input() accept: string | null = null;
 
   @Input()

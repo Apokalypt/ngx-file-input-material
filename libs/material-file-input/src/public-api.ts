@@ -13,4 +13,4 @@ export { MatFileInputComponent } from './lib/components/mat-file-input/mat-file-
 export { BytesPipe } from './lib/pipes/bytes.pipe';
 
 /* ==================================== VALIDATORS ======================================= */
-export { FileValidator } from './lib/validators/file-validator';
+export { FileValidators } from './lib/validators/file-validators';

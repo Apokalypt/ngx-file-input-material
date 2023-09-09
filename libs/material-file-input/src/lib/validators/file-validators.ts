@@ -6,7 +6,7 @@ type FileInputControl = AbstractControl<FileInput | undefined>;
 type FileInputMaxSizeError = { maxContentSize: { actualSize: number, maxSize: number } };
 type FileInputMinSizeError = { minContentSize: { actualSize: number, minSize: number } };
 
-export class FileValidator {
+export abstract class FileValidators {
     static maxContentSize(maxSizeInBytes: number): ValidatorFn {
         return (control: FileInputControl): null | FileInputMaxSizeError => {
             const input = control.value;

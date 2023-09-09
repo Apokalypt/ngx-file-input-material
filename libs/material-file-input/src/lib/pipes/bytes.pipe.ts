@@ -25,13 +25,21 @@ export class BytesPipe implements PipeTransform {
 
   transform(input: string | number, precision?: number, from?: ByteUnit, to?: ByteUnit): any {
     // Validate input format
+    if (input == null || Array.isArray(input)) {
+      // Handle special cases where input is null or an array but the parsed value is not NaN
+      return input;
+    }
     const value = this._parseInput(input);
     if (Number.isNaN( value )) {
       return input;
     }
 
     // Validate decimal format
-    precision = this._parsePrecision(precision ?? this._config?.defaultDecimals ?? 0);
+    if (Array.isArray(precision)) {
+      // Handle special cases where precision is an array but the parsed value is not NaN
+      return input;
+    }
+    precision = this._parsePrecision(precision ?? this._config?.defaultPrecision ?? 0);
     if (Number.isNaN( precision )) {
       return input;
     }
@@ -52,10 +60,11 @@ export class BytesPipe implements PipeTransform {
       unit = BytesPipe.FORMATS[unit as keyof typeof BytesPipe.FORMATS].prev!;
     }
 
-    if (to) {
-      const format = BytesPipe.FORMATS[to];
+    const destinationUnit = to ?? this._config?.destinationValueUnit;
+    if (destinationUnit) {
+      const format = BytesPipe.FORMATS[destinationUnit];
 
-      return this._formatResult(this._calculateResult(format, bytes), precision, to);
+      return this._formatResult(this._calculateResult(format, bytes), precision, destinationUnit);
     }
 
     for (const key in BytesPipe.FORMATS) {

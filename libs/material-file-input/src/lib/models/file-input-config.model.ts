@@ -26,5 +26,5 @@ export interface FileInputConfig {
      * Default decimal to use when formatting bytes using the BytesPipe.
      * @default 0
      */
-    defaultDecimals?: number;
+    defaultPrecision?: number;
 }

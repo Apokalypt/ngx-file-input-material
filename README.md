@@ -13,7 +13,7 @@ again in order to maintain it and make it evolve in future versions of Angular.
   - [Module - MatFileInputModule](#module---matfileinputmodule)
   - [Component - MatFileInput](#component---matfileinput)
   - [Pipe - BytesPipe](#pipe---bytespipe)
-  - [Validators - FileValidator](#validators---filevalidator)
+  - [Validators - FileValidators](#validators---filevalidators)
 - [Help and support](#help-and-support)
 - [Contributing](#contributing)
 
@@ -113,7 +113,7 @@ Converts a number of bytes into a human-readable string.
 {{ 1024 | bytes:2:'MB':'GB' }} <!-- 1.02 GB -->
 ```
 
-### Validators - FileValidator
+### Validators - FileValidators
 
 This class provide some utils function to validate files using [Angular Form Validators](https://v14.angular.io/api/forms/Validators).
 
