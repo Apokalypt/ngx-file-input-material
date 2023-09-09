@@ -1,11 +1,32 @@
 {
-  "name": "material-file-input",
-  "version": "14.0.0-beta.0",
+  "name": "ngx-file-input-material",
+  "version": "14.0.0-beta.1",
+  "license": "MIT",
+  "author": {
+    "email": "contact@apokalypt.fr",
+    "name": "Apokalypt"
+  },
   "dependencies": {},
   "peerDependencies": {
     "@angular/cdk": "^14.0.0",
     "@angular/common": "^14.0.0",
     "@angular/core": "^14.0.0",
     "@angular/material": "^14.0.0"
+  },
+  "keywords": [
+    "angular",
+    "material",
+    "file",
+    "input",
+    "mat-form-field",
+    "form",
+    "ngx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Apokalypt/ngx-file-input-material.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Apokalypt/ngx-file-input-material/issues"
   }
 }
